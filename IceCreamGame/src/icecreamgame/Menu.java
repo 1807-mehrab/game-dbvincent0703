@@ -131,7 +131,7 @@ public class Menu {
                                 System.out.println("Please select worker number?");
                                 i = input.nextInt();
                              
-                                ActiveWorker = RedoShop.WorkerList.get(i);  //
+                                ActiveWorker = Shop.WorkerList.get(i);  //
                                 System.out.printf("You selected: %d %s%n",ActiveWorker.getIdNumber(), ActiveWorker.getName());
                                 System.out.println("---------------------------------------------------");                                
                                 System.out.println("Active Worker: "+ActiveWorker.getName());
@@ -144,7 +144,7 @@ public class Menu {
                                    shop.showCashier();
                                     System.out.println("Please select cashier worker number?");
                                     i = input.nextInt();
-                                    ActiveCashier = RedoShop.CashierList.get(i); //
+                                    ActiveCashier = Shop.CashierList.get(i); //
                                     System.out.printf("You selected cashier: %d %s %n", ActiveCashier.getIdNumber(),ActiveCashier.getName());
                                     System.out.println("---------------------------------------------------");
                                     System.out.println("Active Cashier: "+ActiveCashier.getName());
@@ -162,7 +162,7 @@ public class Menu {
                                     shop.showStocker();
                                     System.out.println("Please select stocker number?");
                                     i = input.nextInt();
-                                    ActiveStocker = RedoShop.StockerList.get(i); 
+                                    ActiveStocker = Shop.StockerList.get(i); 
 
                                     System.out.printf("You selected stocker: %d %s %n",ActiveStocker.getIdNumber(),ActiveStocker.getName());
                                     System.out.println("---------------------------------------------------");
@@ -181,7 +181,7 @@ public class Menu {
                                 System.out.println("Which customer is ordering?");
                                
                                 i = input.nextInt();       
-                                ActiveCustomer = RedoShop.CustomerList.get(i);
+                                ActiveCustomer = Shop.CustomerList.get(i);
                                 System.out.printf("You selected customer: %d %s %n ",ActiveCustomer.getIdNumber(),ActiveCustomer.getName());
                                 System.out.println("---------------------------------------------------");
                                 System.out.printf("Active customer: %s %n",ActiveCustomer.getName());
@@ -227,7 +227,7 @@ public class Menu {
                                                 {
                                                     break;
                                                 }
-                                                ice_cream = RedoShop.IceList.get(ice_number);
+                                                ice_cream = Shop.IceList.get(ice_number);
                                                 
                                                 try{
                                                     if(ice_cream.getScoops() > 0)
@@ -291,7 +291,7 @@ public class Menu {
                                                 {
                                                     break;
                                                 }
-                                                ice_cream = RedoShop.IceList.get(ice_number);
+                                                ice_cream = Shop.IceList.get(ice_number);
                                                 
                                                 try{
                                                     if(ice_cream.getScoops() > 0)
@@ -361,7 +361,7 @@ public class Menu {
                                         {
                                             break;
                                         }
-                                        ice_cream = RedoShop.IceList.get(ice_number);
+                                        ice_cream = Shop.IceList.get(ice_number);
 
                                         try{
                                             if(ice_cream.getScoops() > 0)
@@ -495,7 +495,7 @@ public class Menu {
                                 shop.showWorker();
                                 System.out.println("Which worker number need to be update?");
                                 i = input.nextInt();
-                                Worker up = RedoShop.WorkerList.get(i); 
+                                Worker up = Shop.WorkerList.get(i); 
                                 System.out.printf("You selected update worker: ID %d %s %n",up.getIdNumber(),up.getName());
                                 System.out.println("---------------------------------------------------");
                                 System.out.println("Please enter the update information in the order of : Type worker, ID,Name,customers served, scoops served, $taken in");
@@ -507,7 +507,7 @@ public class Menu {
                                 shop.showCashier();
                                  System.out.println("Which cashier worker number need to be update?");
                                 i = input.nextInt();
-                                CashierWorker cas = RedoShop.CashierList.get(i); 
+                                CashierWorker cas = Shop.CashierList.get(i); 
 
                                 System.out.printf("You selected update cashier worker: ID %d %s %n",cas.getIdNumber(),cas.getName());
                                 System.out.println("---------------------------------------------------");
@@ -520,7 +520,7 @@ public class Menu {
                                 shop.showStocker();
                                 System.out.println("Which stocker worker number need to be update?");
                                 i = input.nextInt();
-                                Stocker sto = RedoShop.StockerList.get(i); 
+                                Stocker sto = Shop.StockerList.get(i); 
 
                                 System.out.printf("You selected update stocker worker: ID %d %s %n"+sto.getIdNumber(),sto.getName());
                                 System.out.println("---------------------------------------------------");
