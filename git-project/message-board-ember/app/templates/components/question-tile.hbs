@@ -1,0 +1,30 @@
+<div class="col-sm-12 col-sm-offset-1 message-board">
+  <div class="message-container">
+    <div class="row">
+      <div class="col-sm-1 col-sm-offset-11">
+        <button {{action 'destroyQuestion' question answer}}>x</button><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <h3>{{question.content}}</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5 col-sm-offset-7">
+        <h5><em>{{question.author}} ({{question.date}})</em></h5>
+      </div>
+    </div>
+  </div>
+  {{#each sortedAnswers as |answer|}}
+    {{answer-tile answer=answer question=question like="like" dislike="dislike" showAnswer="showAnswer"}}
+    {{else}}
+    <div class="message-container answer-container" style="background-color:orange">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <p class="subtitle" >No answers have been added yet</p>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>

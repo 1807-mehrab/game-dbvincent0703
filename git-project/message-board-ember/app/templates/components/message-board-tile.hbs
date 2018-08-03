@@ -1,0 +1,26 @@
+<div class="message-container tile-hover">
+  <div class="row">
+    <div class="col-sm-1">
+      {{#if checkForFavorite}}
+       <button {{action 'addToFavorites' question}} class="question-star-icon"><i class="glyphicon glyphicon-star-empty yellow-star"></i></button>
+      {{else}}
+        <button {{action 'addToFavorites' question}} class="question-star-icon"><i class="glyphicon glyphicon-star-empty"></i></button>
+      {{/if}}
+    </div>
+    {{#link-to 'question' question.id}}
+    <div class="question-content col-sm-12">
+      <h3>{{question.content}}</h3>
+    </div>
+    {{/link-to}}
+    {{#link-to 'question' question.id}}
+    <div class="col-sm-1">
+      <span class="answer-count-badge badge">{{question.answers.length}}</span>
+    </div>
+    {{/link-to}}
+  </div>
+  <div class="row">
+    <div class="col-sm-5 col-sm-offset-7">
+      <h5><em>{{question.author}} ({{question.date}})</em></h5>
+    </div>
+  </div>
+</div>

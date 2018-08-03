@@ -1,0 +1,60 @@
+{{#each favoritesList.favorites as |favorite|}}
+  <div class="col-sm-10 col-sm-offset-1 message-board">
+    <div class="message-container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <h3>{{favorite.content}}</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-5 col-sm-offset-7">
+          <h5><em>{{favorite.author}} ({{favorite.date}})</em></h5>
+        </div>
+      </div>
+    </div>
+    {{#each favorite.answers as |answer|}}
+      <div class="message-container answer-container">
+        <div class="col-sm-4 col-sm-offset-9">
+          <button {{action "like" answer}} class="answer-rating"><i class="answer-rating-icon glyphicon glyphicon-thumbs-up"></i> <span class="badge answer-rating-badge">{{answer.likes}}</span></button>
+          <button {{action "dislike" answer}} class="answer-rating"><i class="answer-rating-icon glyphicon glyphicon-thumbs-down"></i> <span class="badge answer-rating-badge">{{answer.dislikes}}</span></button>
+        </div>
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <h3>{{answer.content}}</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-5 col-sm-offset-7">
+            <h5><em>{{answer.author}} ({{answer.date}})</em></h5>
+          </div>
+        </div>
+      </div>
+    {{else}}
+      <div class="message-container answer-container">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <p class="subtitle">No answers have been added yet</p>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <hr>
+    </div>
+  </div>
+{{else}}
+  <div class="col-sm-10 col-sm-offset-1 message-board">
+    <div class="message-container question-container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <p class="subtitle">Add favorites from the home page</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/each}}
+<div class="text-center">
+  <button {{action 'clear'}}>Clear List</button>
+</div>

@@ -1,0 +1,13 @@
+{
+ "firebase": "message_board_ember",
+ "public": "dist",
+ "ignore": [
+ "firebase.json",
+ "**/.*",
+ "**/node_modules/**"
+ ],
+ "rewrites": [{
+   "source": "**",
+   "destination": "/index.html"
+ }]
+}
