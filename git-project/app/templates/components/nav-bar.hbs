@@ -1,0 +1,34 @@
+<div class="all">
+  <div class="container">
+    {{#link-to "admin"}}
+    <a class="navbar-brand" href="#">Profile</a>
+    {{/link-to}} {{#link-to "contact"}}
+    <a class="navbar-brand" href="#">Contact</a>
+    {{/link-to}} {{#link-to "about"}}
+    <a class="navbar-brand" href="#">About</a>
+    {{/link-to}}
+  </div>
+
+  <hr>
+  <div class="row">
+    <div class="col-sm-12">
+      {{#link-to "index" class="title-link"}}
+      <h1 class="title">Revature
+        <br>Message Board</h1>
+      {{/link-to}}
+    </div>
+
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-sm-12">
+      <ul class="nav navbar-nav navbar">
+        {{#link-to 'index.new-question' class="new-q-link"}}
+        <button class="mynav new-q-btn post-q-nav-item">Question?
+        </button>
+        {{/link-to}}
+      </ul>
+    </div>
+  </div>
+  <hr>
+</div>

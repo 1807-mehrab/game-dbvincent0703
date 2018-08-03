@@ -1,0 +1,11 @@
+{{update-question question=model.question update="update"}}
+
+{{question-tile question=model.question answers=model.answers destroyQuestion="destroyQuestion" like="like" dislike="dislike"}}
+
+<div class="row"> 
+  <div class="col-md-12">
+    <hr>
+  </div>
+</div>
+
+{{new-answer saveAnswer="saveAnswer" question=model.question}}
